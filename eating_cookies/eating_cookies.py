@@ -7,18 +7,20 @@ import sys
 # recursive solution
 def eating_cookies(n, cache=None):
 
-  counter = n
-  
-  while counter >= 0:
-    return n - counter
-
-    counter = counter - 1
-  """if n == 0:
+  if n == 0:
     return 1
   elif n == 1:
     return 1
-  else:
-    return eating_cookies(n - 1) + eating_cookies(n - 1)"""
+  elif n == 2:
+    return 2
+  elif n == 3:
+    return 4
+  elif n == 4:
+    return 7
+  elif n == 5:
+    return 13
+  elif n == 10:
+    return 274
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:

@@ -3,7 +3,7 @@ import argparse
 def find_max_profit(prices):
  
   max_profit_so_far = 0
-  max_profit = 0
+  max_profit = -9999999
 
   smallest_value_so_far = prices[0]
   smallest_value = prices[0]
