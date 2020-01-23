@@ -11,10 +11,22 @@ from itertools import permutations
 
 
 def rock_paper_scissors(n):
+
+  game = []
   
-    pass
+  if n == 0:
+    return [[]]
+  if n == 1:
+    return [['rock'], ['paper'], ['scissors']]
+  if n == 2:
+    return [['rock', 'rock'], ['rock', 'paper'], ['rock', 'scissors'], ['paper', 'rock'], ['paper', 'paper'], ['paper', 'scissors'], ['scissors', 'rock'], ['scissors', 'paper'], ['scissors', 'scissors']]
+  else:
+    for possibilities in rock_paper_scissors(n - 1):        
+        game.append(possibilities + ["rock"])
+        game.append(possibilities + ["paper"])
+        game.append(possibilities + ["scissors"])
 
-
+  return game
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
