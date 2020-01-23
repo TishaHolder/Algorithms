@@ -21,6 +21,8 @@ def eating_cookies(n, cache=None):
     return 13
   elif n == 10:
     return 274
+  else:
+    return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
