@@ -3,7 +3,9 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+
+  pass
+
 
 
 if __name__ == "__main__":
